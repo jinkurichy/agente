@@ -16,3 +16,7 @@ app.post("/agent", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("Agente corriendo en Railway"));
+
+app.get("/", (req, res) => {
+  res.json({ status: "ok", agent: true });
+});
